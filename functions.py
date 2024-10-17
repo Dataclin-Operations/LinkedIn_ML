@@ -354,7 +354,6 @@ def ml_model(model_name):
     
 
 
-@st.cache_data()
 def ml_model_predict(model, data):
     start_time = time.time()
     model.fit(X, y)
