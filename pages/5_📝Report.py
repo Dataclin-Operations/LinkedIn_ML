@@ -16,7 +16,7 @@ if __name__ == "__main__":
     logo_path = "./TheLogo2.png"  # Replace with the path to your logo image
     st.sidebar.image(logo_path, use_column_width=True)
     # Path to your HTML file
-    html_file = Path("2_Linkedin_Analysis.html")
+    html_file = Path("./2_Linkedin_Analysis.html")
 
     # Load the HTML content
     html_content = load_html(html_file)
