@@ -24,15 +24,15 @@ if __name__ == "__main__":
     # Display the HTML content in the Streamlit app
 
 
-    st.markdown("<h2 style='color: #008080; text-align:left'>Krakon Exploratory Data Analysis Report</h2>", unsafe_allow_html=True)
+    st.markdown("<h2 style='color: #008080; text-align:left'>Linkedin Exploratory Data Analysis Report</h2>", unsafe_allow_html=True)
     st.markdown("<hr style='border: 1px solid #008080; margin-top: 5px; margin-bottom: 5px;'>", unsafe_allow_html=True)
 
-    st.sidebar.markdown("<h2 style='color: #008080; text-align:center'>Krakon Report</h2>", unsafe_allow_html=True)
+    st.sidebar.markdown("<h2 style='color: #008080; text-align:center'>Linkedin Project Report</h2>", unsafe_allow_html=True)
     st.sidebar.download_button(
         label="Click to Download Report as HTML",
         data=html_content,
         file_name="2_Linkedin_Analysis.html",
         mime="application/html",
-        key="krakon"
+        key="Linkedin"
     )
     st.components.v1.html(html_content, height=800, scrolling=True)
