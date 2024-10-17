@@ -101,20 +101,20 @@ if __name__ == "__main__":
     st.image('./TheLogo2.png', use_column_width=True)        
     st.markdown("<h1 style='color: #008080; text-align:center'>Linkedin Exploratory Data Analysis and Machine learning Project</h1>", unsafe_allow_html=True)
     st.markdown("<h3 style='color: #008080; text-align:center'>We have 12 datasets, 4 categories (DataClin, CRO, MA, and SMO), Each category has 3 datasets (Visitors, Followers, Content).</h3>", unsafe_allow_html=True)
-    st.markdown("<h4 style='color: #008080; text-align:center'>Check Exploratory data analysis from here</h4>", unsafe_allow_html=True)
-    # st.markdown("<h3 style='color: #008080; text-align:left'>The dataset for this competition (both train and test) was generated from a deep learning model trained on the Cirrhosis Patient Survival Prediction dataset. Feature distributions are close to, but not exactly the same, as the original. Feel free to use the original dataset as part of this competition, both to explore differences as well as to see whether incorporating the original in training improves model performance.</h3>", unsafe_allow_html=True)
-    zip_file = Path("Linkedin.rar")
+    # st.markdown("<h4 style='color: #008080; text-align:center'>Check Exploratory data analysis from here</h4>", unsafe_allow_html=True)
+    # # st.markdown("<h3 style='color: #008080; text-align:left'>The dataset for this competition (both train and test) was generated from a deep learning model trained on the Cirrhosis Patient Survival Prediction dataset. Feature distributions are close to, but not exactly the same, as the original. Feel free to use the original dataset as part of this competition, both to explore differences as well as to see whether incorporating the original in training improves model performance.</h3>", unsafe_allow_html=True)
+    # zip_file = Path("Linkedin.rar")
 
-    # Open the .rar file in binary mode
-    with open(zip_file, "rb") as f:
-        zip_data = f.read()
+    # # Open the .rar file in binary mode
+    # with open(zip_file, "rb") as f:
+    #     zip_data = f.read()
 
-    col1, col2, col3 = st.columns([1,1.5,1])
-    with col2:
-        st.download_button(
-            label="Download EDA Report as rar File",
-            data=zip_data,
-            file_name="Linkedin.rar",
-            mime="application/x-rar-compressed",  # Correct MIME type for .rar files
-            key="krakon"
-        )
+    # col1, col2, col3 = st.columns([1,1.5,1])
+    # with col2:
+    #     st.download_button(
+    #         label="Download EDA Report as rar File",
+    #         data=zip_data,
+    #         file_name="Linkedin.rar",
+    #         mime="application/x-rar-compressed",  # Correct MIME type for .rar files
+    #         key="krakon"
+    #     )
