@@ -2,15 +2,15 @@
 #                          Import Libiraries
 #==========================================================================#
 import sys
+import os
+from pathlib import Path
 # Caution: path[0] is reserved for script path (or '' in REPL)
 
 import streamlit as st
 import pandas as pd
-from st_aggrid import AgGrid, GridOptionsBuilder, JsCode
-from st_aggrid.shared import GridUpdateMode
-from streamlit_extras.dataframe_explorer import dataframe_explorer 
-import os
-from pathlib import Path
+#from st_aggrid import AgGrid, GridOptionsBuilder, JsCode
+#from st_aggrid.shared import GridUpdateMode
+#from streamlit_extras.dataframe_explorer import dataframe_explorer 
 
 
 
@@ -87,33 +87,7 @@ def make_dcs():
     st.subheader('Columns Description', divider='blue')
     # st.write("Notebooks by notebook name:")
 
-    gd = GridOptionsBuilder.from_dataframe(df)
-    # gd.configure_pagination(enabled=True)
-    # gd.configure_column("Upvotes", header_name="Upvotes",minWidth=50,groupable=True,aggFunc="sum")
-    # gd.configure_column("URL", header_name="URL",minWidth=500,groupable=True,)
-    # gd.configure_column("Notebook Title", header_name="Notebook Title",minWidth=400,groupable=True,)
-    # gd.configure_column("Owner", header_name="Owner",minWidth=150,groupable=True,pivot=True, )
-    gd.configure_default_column(
-                    filter=True,autoSize=True,
-                    resizable=True,
-                    headerStyle={'textAlign': 'right', 'fontSize': '16px', 'fontWeight': 'bold', 'fontFamily': 'Arial, sans-serif', 'backgroundColor': '#f0f0f0', 'color': 'black'},  # Styling for header
-                    cellStyle={'textAlign': 'left', 'fontSize': '16px', 'fontWeight': 'bold', 'fontFamily': 'Arial, sans-serif',}
-                    )
-
-
-    # gd.configure_side_bar()
-    # gd.configure_selection(selection_mode="multiple",use_checkbox=True)
-    gridoptions = gd.build()
-
-
-    # Display the custom CSS
-    grid_table = AgGrid(df.reset_index(),gridOptions=gridoptions,
-                update_mode=GridUpdateMode.MODEL_CHANGED | GridUpdateMode.SELECTION_CHANGED,
-                height = 800,
-                allow_unsafe_jscode=True,
-                enable_enterprise_modules = True,
-                theme = 'alpine',)
-
+    
 
 
 
